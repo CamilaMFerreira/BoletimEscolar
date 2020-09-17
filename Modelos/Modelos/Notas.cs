@@ -9,7 +9,7 @@ namespace BoletimEscolar.Modelos
     {
         public int Id { get; set; }
 
-        public int Nota { get; set; }
+        public double Nota { get; set; }
 
         public int IdAluno { get; set; }
         public int IdMateria { get; set; }

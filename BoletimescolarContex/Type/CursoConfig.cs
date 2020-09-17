@@ -11,7 +11,7 @@ namespace Modelos.Type
             builder.HasKey(q => q.Id);
             builder.Property(q => q.Nome).IsRequired().HasMaxLength(100);
             builder.Property(q => q.Situação).IsRequired();
-           
+            builder.HasMany(q => q.Materias).WithOne().HasForeignKey(q => q.IdCurso);
         }
     }
 }

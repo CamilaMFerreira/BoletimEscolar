@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modelos", "Modelos\Modelos.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletimEscolar-Aluno", "BoletimEscola\BoletimEscolar-Aluno.csproj", "{3EA851FB-B853-40DB-8164-5F63CBC48FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletimEscolaFormsVisual", "BoletimEscolaFormsVisual\BoletimEscolaFormsVisual.csproj", "{1A30F432-6F2B-4F0F-8264-43C7B7B6508C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletimEscolaFormsVisual", "BoletimEscolaFormsVisual\BoletimEscolaFormsVisual.csproj", "{1A30F432-6F2B-4F0F-8264-43C7B7B6508C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

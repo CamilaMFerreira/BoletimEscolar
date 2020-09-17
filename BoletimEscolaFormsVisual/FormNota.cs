@@ -27,8 +27,8 @@ namespace BoletimEscolaFormsVisual
 
         private void cb_materia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var caminho = "https://localhost:44343/CadastroMaterias/MostraMaterias";
-            cb_materia = new listar().MeuGet(caminho).; 
+            //var caminho = "https://localhost:44343/CadastroMaterias/MostraMaterias";
+            //cb_materia = new listar().MeuGet(caminho); 
 
         }
 

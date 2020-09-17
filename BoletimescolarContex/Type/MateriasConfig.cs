@@ -4,14 +4,16 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Modelos.Type
 {
-    public class CursoConfig : IEntityTypeConfiguration<Curso>
+    public class MateriasConfig : IEntityTypeConfiguration<Materia>
     {
-        public void Configure(EntityTypeBuilder<Curso> builder)
+
+        public void Configure(EntityTypeBuilder<Materia> builder)
         {
             builder.HasKey(q => q.Id);
-            builder.Property(q => q.Nome).IsRequired().HasMaxLength(100);
+            builder.Property(q => q.Descrição).IsRequired();
+            builder.Property(q => q.DataCadastro).IsRequired();
             builder.Property(q => q.Situação).IsRequired();
-           
+
         }
     }
 }
