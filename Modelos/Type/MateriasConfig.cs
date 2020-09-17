@@ -1,22 +1,19 @@
 ﻿using BoletimEscolar.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Modelos.Type
 {
-    public class MateriasConfig : EntityTypeConfiguration<Materia>
+    public class MateriasConfig : IEntityTypeConfiguration<Materia>
     {
-        public MateriasConfig()
+
+        public void Configure(EntityTypeBuilder<Materia> builder)
         {
-            HasKey(q => q.Id);
-            Property(q => q.Descrição).IsRequired();
-            Property(q => q.DataCadastro).IsRequired();
-            Property(q => q.Situação).IsRequired();
-            //HasRequired(q => q.Curso).WithMany().HasForeignKey(q => q.IdCurso);
-           // HasMany(q => q.Notas).WithRequired().HasForeignKey(q => q.IdMateria);
+            builder.HasKey(q => q.Id);
+            builder.Property(q => q.Descrição).IsRequired();
+            builder.Property(q => q.DataCadastro).IsRequired();
+            builder.Property(q => q.Situação).IsRequired();
+
         }
-       
     }
 }

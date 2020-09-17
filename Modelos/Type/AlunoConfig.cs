@@ -1,28 +1,27 @@
 ﻿using BoletimEscolar.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Modelos.Type
 {
-    public class AlunoConfig : EntityTypeConfiguration<Aluno>
+    public class AlunoConfig : IEntityTypeConfiguration<Aluno>
     {
-        
-            public AlunoConfig()
-            {
+        public void Configure(EntityTypeBuilder<Aluno> builder)
+        {
 
-                HasKey(q => q.Id);
-                Property(q => q.Nome).IsRequired().HasMaxLength(100);
-                Property(q => q.Sobrenome).IsRequired().HasMaxLength(100);
-                Property(q => q.Cpf).IsRequired().HasMaxLength(100);
-                Property(q => q.DataNascimento).IsRequired();
-               // HasMany(q => q.Notas).WithRequired().HasForeignKey(q => q.IdAluno);
-               // HasRequired(q => q.Notas).WithMany().HasForeignKey(q => q.IdNotas);
+
+            builder.HasKey(q => q.Id);
+            builder.Property(q => q.Nome).IsRequired().HasMaxLength(100);
+            builder.Property(q => q.Sobrenome).IsRequired().HasMaxLength(100);
+            builder.Property(q => q.Cpf).IsRequired().HasMaxLength(100);
+            builder.Property(q => q.DataNascimento).IsRequired();
+            builder.HasOne(x => x.Curso).WithMany().HasForeignKey(x => x.IdCurso);
+
 
 
         }
 
-        
+
+
     }
 }

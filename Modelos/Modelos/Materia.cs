@@ -12,9 +12,8 @@ namespace BoletimEscolar.Modelos
         public string Descrição { get; set; }
         public DateTime DataCadastro { get; set; }
         public string Situação { get; set; }
+        public int IdCurso { get; set; }
+        public virtual Curso Curso { get; set; }
 
-        
-        public ICollection<Curso> Cursos { get; set; } = new HashSet<Curso>();
-        
     }
 }

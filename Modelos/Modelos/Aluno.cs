@@ -12,11 +12,8 @@ namespace BoletimEscolar.Modelos
         public string Sobrenome { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Cpf { get; set; }
-        //public int IdNotas { get; set; }
+        public int IdCurso { get; set; }
+        public virtual Curso Curso { get; set; }
 
-        //public virtual Notas Notas { get; set; }
-
-        //public ICollection<Notas> Notas { get; set; } = new HashSet<Notas>();
-      
     }
 }
